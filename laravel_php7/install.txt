@@ -1,0 +1,2 @@
+https://gist.github.com/santoshachari/87bf77baeb45a65eb83b553aceb135a3
+https://asked.io/how-to-install-php-7-x--nginx-1-9-x---laravel-5-x
