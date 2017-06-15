@@ -35,7 +35,7 @@
 	cgi.fix_pathinfo=0
 or 
 
-	echo ‘cgi.fix_pathinfo=0’ >> /etc/php/7.0/fpm/php.ini
+	echo 'cgi.fix_pathinfo=0' >> /etc/php/7.0/fpm/php.ini
 
 
 
