@@ -2,19 +2,14 @@ server {
     listen 80;
     #listen [::]:80 ipv6only=on;
 
-    root /var/www/html/public;
+    root /home/nick/blog/public;
+    
     index index.php index.html index.htm;
 
     server_name nick.com.tw;
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    error_page 404 /404.html;
-    error_page 500 502 503 504 /50x.html;
-    location = /50x.html {
-        root /usr/share/nginx/html;
     }
 
     location ~ \.php$ {
@@ -25,6 +20,13 @@ server {
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
     }
+
     access_log /var/log/nginx/nick-access.log;
     error_log /var/log/nginx/nick-error.log;
+
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /usr/share/nginx/html;
+    }
 }
